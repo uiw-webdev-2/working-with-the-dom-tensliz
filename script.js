@@ -4,17 +4,28 @@
  * @link https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll
  */
 
-import Backpack from "./Backpack.js";
+import Album from "./album.js";
 
-const everydayPack = new Backpack(
+const theAlbum = new Album(
+  " Black and White",
+  " Universe",
+  12,
+  2,
+  false,
+  true
 );
 
 const content = `
-     <figure class="backpack__image">
-       <img src= alt="" />
+     <figure class="album__image">
+       <img src=${theAlbum.image} alt="" />
      </figure>
-     <h1 class="backpack__name"></h1>
-     <ul class="backpack__features">
+     <h1 class="album__name">${theAlbum.name}</h1>
+     <ul class="album__features">
+     <li>Color:${theAlbum.color}</li>
+     <li>Tracks:${theAlbum.tracks}</li>
+     <li>Pc:${theAlbum.pc}</li>
+     <li>Posters:${theAlbum.posters}</li>
+     <li>Stickers:${theAlbum.stickers}</li>
      </ul>
    </article>
  `;
